@@ -57,6 +57,26 @@ SELECT
   WHERE PREATTENDING_CLASS_NO IS NOT NULL;
   
 -- 춘 대학에는 어떤 계열(CATEGORY)들이 있는지 조회해보시오.
+SELECT
+        DISTINCT(CATEGORY)
+   FROM TB_DEPARTMENT;
 
+-- 02 학번 전주 거주자들의 모임을 만들려고 핚다. 휴학핚 사람들은 제외핚 재학중인
+-- 학생들의 학번, 이름, 주민번호를 출력하는 구문을 작성하시오.
+SELECT
+        STUDENT_NO
+      , STUDENT_NAME
+      , STUDENT_SSN
+   FROM TB_STUDENT
+  WHERE ABSENCE_YN = 'N';
 
-
+-- 영어영문학과(학과코드 002) 학생들의 학번과 이름, 입학 년도를 입학 년도가 빠른
+-- 순으로 표시하는 SQL 문장을 작성하시오.( 단, 헤더는 "학번", "이름", "입학년도" 가
+-- 표시되도록 한다.)
+SELECT
+        STUDENT_NO
+      , STUDENT_NAME
+      , ENTRANCE_DATE
+   FROM TB_STUDENT
+  WHERE DEPARTMENT_NO = '002'
+  ORDER BY ENTRANCE_DATE ASC;
