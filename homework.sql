@@ -26,13 +26,24 @@ SELECT
 SELECT
         STUDENT_NAME
    FROM TB_STUDENT
-  WHERE STUDENT_NO = 'A513091';
+  WHERE STUDENT_NO = 'A513090';
   
 -- 입학정원이 20 명 이상 30 명 이하인 학과들의 학과 이름과 계열을 출력하시오.
 SELECT
         DEPARTMENT_NAME
       , CATEGORY
    FROM TB_DEPARTMENT
+  WHERE CAPACITY BETWEEN 20 AND 30;
+
+-- 춘 기술대학교는 총장을 제외하고 모든 교수들이 소속 학과를 가지고 있다. 그럼 춘
+-- 기술대학교 총장의 이름을 알아낼 수 있는 SQL 문장을 작성하시오.
+SELECT
+        PROFESSOR_NAME
+   FROM TB_PROFESSOR
+  WHERE DEPARTMENT_NO IS NULL;
+  
+-- 혹시 젂산상의 착오로 학과가 지정되어 있지 않은 학생이 있는지 확인하고자 핚다.
+-- 어떠핚 SQL 문장을 사용하면 될 것인지 작성하시오.
 
 
 
