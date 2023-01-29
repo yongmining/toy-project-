@@ -107,11 +107,11 @@ SELECT
   
 -- 4. 교수들의 이름 중 성을 제외핚 이름맊 출력하는 SQL 문장을 작성하시오. 출력 헤더는
 -- ?이름? 이 찍히도록 핚다. (성이 2 자인 경우는 교수는 없다고 가정하시오)
-
--- 성만 빼는건..어떻게..?
 SELECT
-        PROFESSOR_NAME
-   FROM TB_PROFESSOR;
+        SUBSTR(PROFESSOR_NAME,2,3)
+   FROM TB_PROFESSOR
+  WHERE PROFESSOR_NAME NOT LIKE '__';
+
 
 -- 5. 춘 기술대학교의 재수생 입학자를 구하려고 핚다. 어떻게 찾아낼 것인가? 이때,
 -- 19 살에 입학하면 재수를 하지 않은 것으로 갂주핚다.
