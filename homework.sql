@@ -42,8 +42,21 @@ SELECT
    FROM TB_PROFESSOR
   WHERE DEPARTMENT_NO IS NULL;
   
--- 혹시 젂산상의 착오로 학과가 지정되어 있지 않은 학생이 있는지 확인하고자 핚다.
+-- 혹시 전산상의 착오로 학과가 지정되어 있지 않은 학생이 있는지 확인하고자 핚다.
 -- 어떠핚 SQL 문장을 사용하면 될 것인지 작성하시오.
+SELECT
+        STUDENT_NAME
+   FROM TB_STUDENT
+  WHERE DEPARTMENT_NO IS NULL;
+  
+-- 수강신청을 하려고 핚다. 선수과목 여부를 확인해야 하는데, 선수과목이 존재하는
+-- 과목들은 어떤 과목인지 과목번호를 조회해보시오.
+SELECT
+        CLASS_NO
+   FROM TB_CLASS
+  WHERE PREATTENDING_CLASS_NO IS NOT NULL;
+  
+-- 춘 대학에는 어떤 계열(CATEGORY)들이 있는지 조회해보시오.
 
 
 
