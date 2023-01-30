@@ -121,5 +121,21 @@ SELECT
    FROM TB_STUDENT
   WHERE EXTRACT(YEAR FROM ENTRANCE_DATE) - 
   EXTRACT(YEAR FROM STUDENT_ADDRESS) > 19;
+  
+-- 6. 2020 년 크리스마스는 무슨 요일인가?
+SELECT
+        TO_CHAR(TO_DATE(20201225,'YYYYMMDD'),'YYYYMMDD DAY')
+    FROM DUAL;
 
+-- 7. TO_DATE('99/10/11','YY/MM/DD'), TO_DATE('49/10/11','YY/MM/DD') 은 각각 몇 년 몇
+-- 월 몇 일을 의미핛까? 또 TO_DATE('99/10/11','RR/MM/DD'),
+-- TO_DATE('49/10/11','RR/MM/DD') 은 각각 몇 년 몇 월 몇 일을 의미핛까?
+/* 어떤 답을 원하는건지 모르겠다.. */
+SELECT
+        TO_DATE('99/10/11','YY/MM/DD'),TO_DATE('49/10/11','YY/MM/DD')
+      , TO_DATE('99/10/11','RR/MM/DD'),TO_DATE('49/10/11','RR/MM/DD')
+    FROM DUAL;
+
+-- 8. 춘 기술대학교의 2000 년도 이후 입학자들은 학번이 A 로 시작하게 되어있다. 2000 년도
+-- 이젂 학번을 받은 학생들의 학번과 이름을 보여주는 SQL 문장을 작성하시오.
   
