@@ -8,5 +8,5 @@ public class MainMap extends JPanel {
 
 	public MainMap(MainFrame mf) {
 	}
-
+	
 }
