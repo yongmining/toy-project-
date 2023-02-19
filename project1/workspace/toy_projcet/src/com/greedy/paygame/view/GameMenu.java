@@ -54,7 +54,7 @@ public class GameMenu extends JPanel {
 		});
 
 		/* 컴포넌트들 넣을 패널 생성 */
-		this.setLayout(null);ㅂㅂㅂ
+		this.setLayout(null);
 		this.setBounds(0, 0, 800, 580);
 
 		/* 패널에 컴포넌트들 삽입 */
