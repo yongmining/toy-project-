@@ -13,7 +13,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import com.greedy.common.MainFrame;
-import com.greedy.common.constant;
+import com.greedy.paygame.view.pages.memberRank;
 
 
 public class GameMenu extends JPanel {
@@ -74,7 +74,7 @@ public class GameMenu extends JPanel {
 		rankBtn.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				changePanel(mf, gameMenu, new MemberRank(mf));
+				changePanel(mf, gameMenu, new memberRank(mf));
 				System.out.println("전체랭킹 화면으로 이동합니다.");
 			}
 		});
