@@ -44,7 +44,7 @@ public class GameMenu extends JPanel {
 		foodBtn.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				changePanel(mf, gameMenu, new payStartMenu(mf));
+				changePanel(mf, gameMenu, new foodStartMenu(mf));
 				System.out.println("도시락게임 화면으로 이동합니다.");
 			}
 		});
