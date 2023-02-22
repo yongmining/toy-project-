@@ -7,6 +7,8 @@ import javax.imageio.ImageIO;
 import javax.swing.JFrame;
 
 import com.greedy.paygame.view.foodStartMenu;
+import com.greedy.paygame.view.pages.payLosePage;
+import com.greedy.paygame.view.pages.payWinPage;
 
 public class MainFrame extends JFrame {
 	
@@ -19,7 +21,8 @@ public class MainFrame extends JFrame {
 		
 //		new payStartMenu(this);
 //		new GameMenu(this);
-		new foodStartMenu(this);
+//		new foodStartMenu(this);
+		new payLosePage(this);
 		
 		/*프레임창 아이콘*/
 		try {
